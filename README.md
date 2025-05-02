@@ -1,2 +1,2 @@
 # imgedit
-Python image editor
+Python image editor using Pillow
