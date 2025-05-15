@@ -79,7 +79,7 @@ def color_gain(original_img, orig_name):
 
     #adjusted_colours = original_img
     save_result(adjusted_image, orig_name, "colour_gain" )
-    return adjusted_image
+    #return adjusted_image
 
 def apply_basic_filters(img):
     filters = {
@@ -139,8 +139,10 @@ if __name__ == "__main__":
         selected = input("Which picture would you like to edit? \nType the name: \t") +".jpg"
 
 
-    with Image.open(os.path.join(originals_path, selected)) as pic:
+    with Image.open(os.path.join(originals_path, selected)) as pic1:
+        pic = pic1
         print(pic.format, pic.size, pic.mode)
+
         grey_scale(pic,selected)
 
         color_gain(pic, selected)
